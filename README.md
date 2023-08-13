@@ -43,7 +43,7 @@ aggregated value. These values would be updated in the Metric CRD.
 - Contributor: Rakshit Gondwal - [GitHub](https://github.com/rakshitgondwal/) | [LinkedIn](https://www.linkedin.com/in/rakshit-gondwal-911223230/) | [Twitter](https://twitter.com/RakshitGondwal)
 - Mentors:
   - Florian Bacher - [GitHub](https://github.com/bacherfl/) | [LinkedIn](https://www.linkedin.com/in/florian-bacher-6a58ab79/) | [Twitter](https://twitter.com/bacherfl)
-  - Adam Gardner - [GitHub](https://github.com/thschue/) | [LinkedIn](https://www.linkedin.com/in/thschue/) | [Twitter](https://twitter.com/ThSchue)
+  - Thomas Schuetz - [GitHub](https://github.com/thschue/) | [LinkedIn](https://www.linkedin.com/in/thschue/) | [Twitter](https://twitter.com/ThSchue)
 
 ## Contacts
 
