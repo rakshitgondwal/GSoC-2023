@@ -17,7 +17,6 @@ Timeframe for Metrics
 - [Work Summary](#work-summary)
   - [Support for Interval](#support-for-interval)
   - [Support for Step and Aggregation](#support-for-range-and-aggregation)
-  - [Support for multiple results in KeptnMetric Status](#support-for-multiple-results-in-keptnmetric-status)
 - [Challenges](#challenges)
 - [Acknowledgments](#acknowledgments)
 - [Project Resources](#project-resources)
@@ -66,3 +65,23 @@ Features this project includes:
 * Define a Step which would act as a threshold in the time interval.
 * Define an aggregation function which you want to be applied on the data recieved from the SLI provider.
 * Define how many values you want that should be stored in the KeptnMetric.
+
+## Work Summary
+
+The two major milestones of this project were:
+1. Support for Interval
+2. Support for Step and Aggregation
+
+### Support for Interval
+
+- To query metrics over a timeframe, we introduced a new `range.interval` field in the KeptnMetric which is defined as the duration of the time interval for the data query. This field would accept a string value, which has to be a duration such as "1m", "1h" etc.
+- To verify if the value inputed by the user is correct or not, we used https://pkg.go.dev/time#ParseDuration to parse the the field's value with the help of a validating webhook.
+- This feature required updating the APIs of the SLI providers such as Prometheus, Dynatrace and Datadog.
+
+**PRs for this particular milestone:**
+1. feat: add support for timeframe in KeptnMetric [#1471](https://github.com/keptn/lifecycle-toolkit/pull/1471)
+2. feat: update Prometheus API to query metrics over a range [#1587](https://github.com/keptn/lifecycle-toolkit/pull/1587)
+3. feat: update Datadog API to query metrics for range [#1615](https://github.com/keptn/lifecycle-toolkit/pull/1615)
+4. feat: update Dynatrace provider to query metrics over a range [#1658](https://github.com/keptn/lifecycle-toolkit/pull/1658)
+5. feat: add interval field for kubectl get KeptnMetric [#1689](https://github.com/keptn/lifecycle-toolkit/pull/1689)
+6. docs: document timeframe feature for KeptnMetric [#1703](https://github.com/keptn/lifecycle-toolkit/pull/1703)
